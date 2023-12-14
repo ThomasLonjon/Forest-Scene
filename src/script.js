@@ -14,15 +14,15 @@ import fireFragmentShader from "./shaders/fire/fragment.glsl";
 // Base
 // -----------------------------------------------------------------
 // Debug
-const debugObject = {};
-const gui = new dat.GUI();
+// const debugObject = {};
+// const gui = new dat.GUI();
 
 // Canvas
 const canvas = document.querySelector("canvas.webgl");
 
 // Scene
 const scene = new THREE.Scene();
-// scene.background = new THREE.Color(0x16221f);
+scene.background = new THREE.Color(0x16221f);
 
 // -----------------------------------------------------------------
 // Lights
@@ -186,8 +186,8 @@ renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-debugObject.clearColor = "#16221f";
-renderer.setClearColor(debugObject.clearColor);
+// debugObject.clearColor = "#16221f";
+// renderer.setClearColor(debugObject.clearColor);
 // gui.addColor(debugObject, "clearColor").onChange(() => {
 //   renderer.setClearColor(debugObject.clearColor);
 // });
